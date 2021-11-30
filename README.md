@@ -105,7 +105,13 @@ Co-routines are the go-to for any problem in Unity that involves running code ov
 *These should feature singleton game managers with functions, variables and states applicable 
 to both managers listed. Game Manager should be detailed for the specific game made therefor 
 individual game managers.*
-
+  
+I use a game manager/controller in nearly all of my projects. It's great to have one source of truth that enables communication between sub-systems. I use scene controllers in some situations (not all games need much scene management).
+  
+- [PewPew](https://github.com/CatSandwich/PewPew/blob/master/Assets/Scripts/Singletons/GameManager.cs) - this game manager stores all of the references to upgrades as well as the currency. This data is used across the entire game so it makes sense to have it accessible in the singleton manager.
+- [Game of Life asset controller](https://github.com/CatSandwich/Game-of-Life/blob/master/Unity/Assets/Scripts/AssetController.cs) - similar to the above, it's one source of truth to store references to assets.
+- [Solaris scene manager](https://github.com/BeyondTheEcho/Solaris_Defensive/blob/master/Assets/Scripts/SceneManager.cs) - allows for simpler loading of scenes, as well as [data transfer between scenes](https://github.com/BeyondTheEcho/Solaris_Defensive/blob/master/Assets/Scripts/SceneManager.cs#L15-L19) and [callbacks for when the selected scene is over](https://github.com/BeyondTheEcho/Solaris_Defensive/blob/master/Assets/Scripts/SceneManager.cs#L68).
+  
 ## Use source control
 
 *This should demonstrate a GitHub repository online with branch based merged into a main or master 
@@ -114,6 +120,28 @@ master/main in a group dynamic with multiple users editing the same code base wi
 work in the same code files. Students should document files which multiple (at least 2-3) 
 programmers have edited the same file.*
 
+In any group project I've ever worked on, I always used Git (GitHub or GitLab hosted). Using branches to isolate each person's (or feature's) code is incredibly important. An unstable/untested feature shouldn't cause issues for other people working on the project, so said feature is left on a branch until it's suitable for the master branch.
+  
+In a lot of cases, work done on one branch conflicts with work on another. I've gotten better at 2 skills over the years to combat this:
+- Avoiding conflicts preemptively
+  - Communicate with team members to avoid working on the same files where possible, if not, stay in isolated parts of the file
+  - Proper separation of the codebase
+    - The more files it's split into, the less likely a conflict will be
+- Resolving conflicts efficiently
+  - Communication with team members to merge conflicting code into one system that suits both needs
+  - Proper usage of merge conflict tools
+    - I use [rider's conflict resolution tool](https://www.jetbrains.com/help/rider/Resolving_Conflicts.html#vcs-resolve-conflicts)
+  
+Some examples of source control usage:
+  
+- [Solaris-Defensive](https://github.com/BeyondTheEcho/Solaris_Defensive): This was a group project with 6 contributors. With this many contributors, branching is necessary. We all used our own branch, occasionally more branches depending on what features we were working on.
+  - [PlayerController](https://github.com/BeyondTheEcho/Solaris_Defensive/commits/master/Assets/Scripts/Player.cs): This is a rather central file that 4 people modified over the project's lifetime. Through communication and merge conflict resolution, we avoided wasting time resolving preventable issues.
+- [PewPew](https://github.com/CatSandwich/PewPew): A project I worked on with two buddies. Our goal was to make a finished product in a week. With such a heavy time constraint, we were often working at the same time. Through effective communication and proper merge conflict resolution, we avoided wasting time.
+  - [GameManager](https://github.com/CatSandwich/PewPew/commits/master/Assets/Scripts/Singletons/GameManager.cs): Game managers are central and interact with most systems. Due to this, we all touched it at some point.
+  - [Assets](https://github.com/CatSandwich/PewPew/blob/master/Assets/Scripts/Singletons/Assets.cs): Similar to above - manages assets which are used everywhere.
+  - [EnemyScript](https://github.com/CatSandwich/PewPew/blob/master/Assets/Scripts/Enemy/AbstractEnemyScript.cs): Was worked on by 2, if not all 3 of us. Doesn't show due to renaming from 'EnemyScript'.
+    - This one was often worked on at the same time, so I resolved conflicts through rider's merge conflict resolution: \[[1](https://cdn.discordapp.com/attachments/878881756491694081/880725885966225438/unknown.png)\] - \[[2](https://cdn.discordapp.com/attachments/878881756491694081/880726723866554379/unknown.png)\]
+  
 ## Collaborate
 
 *This would be demonstrated using the same criteria as CLO4 however this adds the requirement 
