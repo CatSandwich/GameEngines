@@ -147,3 +147,49 @@ Some examples of source control usage:
 *This would be demonstrated using the same criteria as CLO4 however this adds the requirement 
 for it to be multiple games. Ideally the student should have 3+ games on their public GitHub 
 portfolio to showcase.*
+  
+I've worked on many games in groups before. Some finished, many abandoned. Below are some I've contributed to and how we collaborated:
+  
+### Solaris-Defensive
+
+[Source](https://github.com/BeyondTheEcho/Solaris_Defensive)
+  
+I'm highlighting this project because it's the only one I've worked on where I didn't take the lead. This comes with a different set of collaboration skills required as I'm not in control.
+  
+I joined this project late, and was immediately given features / systems to write within their already established codebase. Through many questions, reading code and reading commit history, I was able to learn how and where to add features. I didn't have a choice but to collaborate as I couldn't do things however I wanted - other people were contributing more than I was so they had a larger say. This led to a lot of good discussion.
+  
+Some examples of collaboration (only sharing my end for privacy):
+- [Debugging others' code](https://i.imgur.com/UFzeZbT.png) - Stelios mentioned a bug in someone's code and asked me to debug. Through conversation and playing with others' code, I identified the issue in the art itself, and worked with the artist to correct it.
+- [Documentation](https://i.imgur.com/6o8Rvbo.png) - As I was writing tools for others to use, I had to document how to use my code. This is part of a lengthy explanation of what I wrote, how it works, and what the other developers need to know to use it properly.
+  
+Overall, this project was fun. I enjoyed not taking the lead on a project. It can be relaxing to have code requested from me instead of deciding what needs to be done.
+  
+### PewPew
+  
+[Source](https://github.com/CatSandwich/PewPew)
+  
+As mentioned before, this project was done in one week. The goal was to practice finishing a product. There is lots that I would love to change / add but that would defeat the purpose.
+  
+In order to efficiently work within a time constraint, communication is key. We needed to break down who was doing what to avoid stepping on each other's toes. This involved designing systems and interfaces to communicate between them before getting started.
+  
+Some examples of collaboration: 
+- [Delegation](https://i.imgur.com/vFNYgEc.png) - as mentioned before, we needed to break down systems. This was done on day 1.
+- [Discussion](https://i.imgur.com/ATn7Ji7.png) - we often helped each other out so save time. When working on a tight schedule, it's much faster to bother each other than to sit there trying to figure it out on your own.
+- [Communication and fun](https://i.imgur.com/fRPCKNK.png) - figuring out schedules can be fun. That's all I'll say here. 
+- [Art requests](https://i.imgur.com/Yngy9tm.png) - giving examples and specifics to the artist so they can provide art that fits the theme.
+  
+This was probably my first completed project, so I'm rather fond of it. Despite being rushed in a week, I wrote some rather modular code in it so in that respect, I'm quite proud of it. The three of us managed to do this through efficient communication. We were constantly discussing how our systems will interact in our group chat to make everything function cohesively.
+  
+### Idle (Unfinished)
+  
+[Source](https://github.com/CatSandwich/Idle)
+  
+In this simple idle game, the player had to manage various resources which can be used to purchase buildings that generate resources over time. The codebase is rather simple as it didn't get far, but there was still a lot of communication necessary to get to where it is.
+  
+For starters, this was intended to be an adaptation of one partner's first game which used block scripting (like scratch). This meant that the game already existed in his mind. It took a lot of discussion while building features to stay true to the game.
+  
+Some examples of collaboration:
+- [Requesting feature](https://i.imgur.com/nYpu1KR.png) - needed a feature, but I was working on something at the time. We had to discuss how to fit the feature into the game without rewriting functionality that was already there.
+- [Documentation](https://i.imgur.com/BqAA6nw.png) - after doing large systems or refactors, I documented what the others needed to know in our group chat.
+  
+While this game didn't survive, it was still fun getting it to the point it's at. I learned a couple of patterns and wrote some reusable code while working on this project.
