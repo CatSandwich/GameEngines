@@ -1,6 +1,6 @@
 # GameEngines PLAR Portfolio
 
-This readme file is the entire PLAR portfolio submission for Game Engines 2 - Advanced Scripting.
+This readme file is the entire PLAR portfolio submission for Game Engines 2 - Advanced Scripting. All related projects will be linked from this page.
 
 ## Overview
 
